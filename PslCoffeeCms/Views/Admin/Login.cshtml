@@ -1,0 +1,43 @@
+@model PslCoffeeCms.Models.SiteSettings
+@{
+    ViewData["Title"] = "CMS Admin Login";
+}
+
+<div class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="card border-0 shadow rounded-4 p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <img src="@Model.LogoUrl" alt="@Model.CompanyName" class="rounded-circle border border-warning shadow-sm mb-3" style="width: 80px; height: 80px; object-fit: cover;" />
+                        <h3 class="fw-bold mb-1">@Model.CompanyName CMS</h3>
+                        <p class="text-muted small mb-0">Sign in to manage menu items, categories, sliders, deals & settings</p>
+                    </div>
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger small py-2">@ViewBag.Error</div>
+                    }
+
+                    <form method="post" asp-controller="Admin" asp-action="Login">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Username</label>
+                            <input type="text" name="username" class="form-control" value="admin" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Password</label>
+                            <input type="password" name="password" class="form-control" value="psl123" required />
+                        </div>
+                        <div class="p-2 rounded-3 bg-psl-cream small mb-3 text-center">
+                            Default Credentials: <strong>admin</strong> / <strong>psl123</strong>
+                        </div>
+                        <button type="submit" class="btn btn-psl-primary w-100 py-2">
+                            <i class="bi bi-unlock-fill me-2"></i>Login to CMS Dashboard
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

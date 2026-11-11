@@ -1,0 +1,203 @@
+@model PslCoffeeCms.Models.CmsDatabase
+@{
+    ViewData["Title"] = "Home";
+    var settings = Model.Settings;
+    var slides = Model.Sliders.OrderBy(s => s.DisplayOrder).ToList();
+    var categories = Model.Categories.OrderBy(c => c.DisplayOrder).ToList();
+    var featured = Model.MenuItems.Where(m => m.Featured && m.Available).Take(6).ToList();
+    var deals = Model.Deals.Where(d => d.Active).ToList();
+}
+
+<!-- 1. Hero Slider Carousel -->
+<section class="hero-section">
+    <div class="container">
+        <div id="pslHeroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @for (int i = 0; i < slides.Count; i++)
+                {
+                    var s = slides[i];
+                    <div class="carousel-item @(i == 0 ? "active" : "")">
+                        <div class="row align-items-center g-5">
+                            <div class="col-lg-7">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <img src="@settings.LogoUrl" alt="@settings.CompanyName" class="rounded-circle border border-2 border-warning shadow" style="width: 64px; height: 64px; object-fit: cover;" />
+                                    <span class="hero-badge"><i class="bi bi-stars me-1 text-warning"></i>@s.Badge</span>
+                                </div>
+                                <h1 class="display-4 fw-bold mb-3 text-white">@s.Title</h1>
+                                <p class="lead mb-4 opacity-90" style="max-width: 600px;">@s.Subtitle</p>
+                                <div class="d-flex flex-wrap gap-3">
+                                    <a asp-controller="Home" asp-action="Menu" class="btn btn-psl-accent btn-lg px-4">
+                                        <i class="bi bi-journal-richtext me-2"></i>Explore Menu
+                                    </a>
+                                    <a href="https://wa.me/@settings.WhatsAppNumber" target="_blank" class="btn btn-outline-light btn-lg px-4">
+                                        <i class="bi bi-whatsapp me-2"></i>WhatsApp: @settings.Phone
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 d-none d-lg-block">
+                                <div class="hero-image-frame">
+                                    <img src="@s.ImageUrl" alt="@s.Title" class="img-fluid rounded-4" style="height: 370px; width: 100%; object-fit: cover;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            @if (slides.Count > 1)
+            {
+                <div class="d-flex gap-2 mt-4">
+                    @for (int i = 0; i < slides.Count; i++)
+                    {
+                        <button type="button" data-bs-target="#pslHeroCarousel" data-bs-slide-to="@i" class="btn btn-sm @(i == 0 ? "btn-warning" : "btn-outline-light") rounded-pill px-3">
+                            0@(i + 1) @slides[i].Title
+                        </button>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- 2. Menu Categories Grid -->
+<section class="py-5 bg-psl-cream">
+    <div class="container">
+        <div class="text-center mb-4">
+            <span class="text-uppercase fw-bold small" style="color: #C58B52;">Explore By Category</span>
+            <h2 class="fw-bold mt-1">Our Menu Categories</h2>
+        </div>
+        <div class="row g-3">
+            @foreach (var cat in categories)
+            {
+                var count = Model.MenuItems.Count(m => m.Category.Equals(cat.Name, StringComparison.OrdinalIgnoreCase));
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 p-3 d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi @cat.Icon fs-4" style="color: #5B3424;"></i>
+                                <h5 class="mb-0 fw-bold">@cat.Name</h5>
+                            </div>
+                            <span class="badge rounded-pill bg-secondary bg-opacity-25 text-dark">@count</span>
+                        </div>
+                        <p class="text-muted small mb-3 flex-grow-1">@cat.Description</p>
+                        <a asp-controller="Home" asp-action="Menu" asp-route-category="@cat.Name" class="btn btn-psl-outline btn-sm w-100">
+                            Browse @cat.Name <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- 3. Featured Menu Items -->
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+            <div>
+                <span class="text-uppercase fw-bold small" style="color: #C58B52;">Handpicked Favorites</span>
+                <h2 class="fw-bold mt-1 mb-0">Signature Menu Highlights</h2>
+            </div>
+            <a asp-controller="Home" asp-action="Menu" class="btn btn-psl-primary mt-3 mt-md-0">
+                View Complete Menu (@Model.MenuItems.Count Items) <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+        </div>
+        <div class="row g-4">
+            @foreach (var item in featured)
+            {
+                <div class="col-sm-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="position-relative" style="height: 210px; overflow: hidden;">
+                            <img src="@item.ImageUrl" alt="@item.Name" class="w-100 h-100" style="object-fit: cover;" />
+                            @if (!string.IsNullOrWhiteSpace(item.Badge))
+                            {
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill fw-bold">@item.Badge</span>
+                            }
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <div class="small text-muted fw-semibold mb-1">@item.Category</div>
+                            <h5 class="fw-bold mb-2">@item.Name</h5>
+                            <p class="text-muted small flex-grow-1 mb-3">@item.Description</p>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <span class="price-pill">@settings.Currency @item.Price</span>
+                                <button type="button" class="btn btn-psl-primary btn-sm px-3" onclick="addToCart('@item.Id', '@item.Name.Replace("'", "\\'")', @item.Price)">
+                                    <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- 4. Special Deals -->
+<section class="py-5 bg-psl-brown">
+    <div class="container">
+        <div class="text-center mb-4">
+            <span class="badge rounded-pill px-3 py-2 mb-2" style="background-color: #C58B52;">Exclusive Combos</span>
+            <h2 class="fw-bold text-white">Special Deals</h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+            @foreach (var deal in deals)
+            {
+                <div class="col-md-6">
+                    <div class="card border-0 rounded-4 h-100 shadow" style="background-color: #F5EBDD; color: #2C1E18;">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-success">@deal.Badge</span>
+                                <span class="fw-bold text-muted small">PSL Combo</span>
+                            </div>
+                            <h3 class="fw-bold mb-3">@deal.Title</h3>
+                            <ul class="list-unstyled mb-3 flex-grow-1">
+                                @foreach (var line in deal.Items)
+                                {
+                                    <li class="mb-1 fw-medium"><i class="bi bi-check2-circle text-success me-2"></i>@line</li>
+                                }
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top border-secondary border-opacity-25">
+                                <div>
+                                    <span class="small text-muted d-block">Deal Price</span>
+                                    <span class="fs-3 fw-bold" style="color: #5B3424;">@settings.Currency @deal.Price</span>
+                                </div>
+                                <button type="button" class="btn btn-psl-primary" onclick="addToCart('@deal.Id', '@deal.Title.Replace("'", "\\'")', @deal.Price)">
+                                    <i class="bi bi-cart-plus me-1"></i>Add Deal to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- 5. About Us & Contact Preview -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-7">
+                <span class="text-uppercase fw-bold small" style="color: #C58B52;">About Us</span>
+                <h2 class="fw-bold mt-1 mb-3">@settings.AboutTitle</h2>
+                <p class="text-muted">@settings.AboutParagraph1</p>
+                <p class="text-muted">@settings.AboutParagraph2</p>
+                <p class="text-muted">@settings.AboutParagraph3</p>
+                <div class="d-flex gap-3 mt-3">
+                    <a asp-controller="Home" asp-action="About" class="btn btn-psl-outline">Read More</a>
+                    <a asp-controller="Home" asp-action="Contact" class="btn btn-psl-primary">Contact Us (@settings.Phone)</a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card border-0 shadow-sm rounded-4 bg-psl-cream p-4 text-center">
+                    <img src="@settings.LogoUrl" alt="@settings.CompanyName" class="rounded-4 mx-auto mb-3 shadow" style="max-width: 210px;" />
+                    <h4 class="fw-bold mb-1">@settings.CompanyName</h4>
+                    <p class="small text-muted mb-3">@settings.BrandFull</p>
+                    <div class="p-3 rounded-3 bg-white border">
+                        <div class="fw-bold mb-1"><i class="bi bi-telephone-fill text-success me-2"></i>Call: @settings.Phone</div>
+                        <div class="fw-bold text-success"><i class="bi bi-whatsapp me-2"></i>WhatsApp: @settings.Phone</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

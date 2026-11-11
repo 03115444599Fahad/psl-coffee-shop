@@ -1,0 +1,53 @@
+@model PslCoffeeCms.Models.CmsDatabase
+@{
+    ViewData["Title"] = "About Us";
+    var settings = Model.Settings;
+    var slides = Model.Sliders.OrderBy(s => s.DisplayOrder).ToList();
+}
+
+<div class="py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center mb-5">
+            <div class="col-lg-7">
+                <span class="text-uppercase fw-bold small" style="color: #C58B52;">About @settings.CompanyName</span>
+                <h1 class="fw-bold mt-1 mb-3">@settings.AboutTitle</h1>
+                <p class="lead fw-medium text-dark">@settings.AboutParagraph1</p>
+                <p class="text-muted">@settings.AboutParagraph2</p>
+                <p class="text-muted">@settings.AboutParagraph3</p>
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a asp-controller="Home" asp-action="Menu" class="btn btn-psl-primary">Explore Our Menu</a>
+                    <a asp-controller="Home" asp-action="Contact" class="btn btn-psl-outline">Contact Us (@settings.Phone)</a>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center">
+                <div class="p-4 rounded-4 bg-psl-cream shadow-sm border">
+                    <img src="@settings.LogoUrl" alt="@settings.CompanyName" class="img-fluid rounded-4 shadow mb-3" style="max-height: 300px;" />
+                    <h4 class="fw-bold mb-1">@settings.BrandFull</h4>
+                    <p class="text-muted small mb-0">POUR • SIP • STAY</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-psl-cream rounded-4 p-4 p-lg-5">
+            <div class="text-center mb-4">
+                <span class="text-uppercase fw-bold small" style="color: #C58B52;">Our Core Pillars</span>
+                <h2 class="fw-bold mt-1">Why Visit @settings.CompanyName</h2>
+            </div>
+            <div class="row g-4">
+                @for (int i = 0; i < slides.Count; i++)
+                {
+                    var s = slides[i];
+                    <div class="col-md-6">
+                        <div class="card border-0 rounded-4 h-100 p-4 shadow-sm">
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                                <span class="badge rounded-3 p-2 fs-6" style="background-color: #5B3424;">0@(i + 1)</span>
+                                <h5 class="fw-bold mb-0">@s.Title</h5>
+                            </div>
+                            <p class="text-muted small mb-0">@s.Subtitle</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

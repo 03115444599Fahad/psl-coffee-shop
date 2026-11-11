@@ -1,13 +1,13 @@
 :root {
-  --psl-primary: #5B3424;
-  --psl-primary-dark: #422418;
-  --psl-secondary: #F5EBDD;
-  --psl-accent: #C58B52;
-  --psl-accent-hover: #b07840;
-  --psl-bg: #FCF9F5;
-  --psl-text: #2C1E18;
-  --psl-muted: #6E5A4F;
-  --psl-border: #E6D7C3;
+  --psl-primary: #0E2A1E;
+  --psl-primary-dark: #071911;
+  --psl-secondary: #F2E9DC;
+  --psl-accent: #D4AF37;
+  --psl-accent-hover: #AA8222;
+  --psl-bg: #FAF6F0;
+  --psl-text: #1E1612;
+  --psl-muted: #6C5E56;
+  --psl-border: #E5D9C5;
   --psl-success: #25D366;
 }
 
@@ -122,7 +122,8 @@ h1, h2, h3, h4, .brand-serif {
 
 /* Hero Banner */
 .hero-section {
-  background: linear-gradient(125deg, rgba(44, 24, 16, 0.9) 0%, rgba(91, 52, 36, 0.82) 100%),
+  background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.22), transparent 45%),
+    linear-gradient(125deg, rgba(7, 25, 17, 0.95) 0%, rgba(14, 42, 30, 0.90) 55%, rgba(35, 20, 13, 0.92) 100%),
     url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
   color: var(--psl-secondary);
   padding: 5.5rem 0;
@@ -238,7 +239,7 @@ h1, h2, h3, h4, .brand-serif {
 
 /* Footer */
 .footer-psl {
-  background-color: #2B1810;
+  background-color: #071911;
   color: var(--psl-secondary);
   border-top: 4px solid var(--psl-accent);
 }
