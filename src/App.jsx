@@ -9,6 +9,7 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Admin from './pages/Admin';
 import { useCart } from './context/CartContext';
 
 export default function App() {
@@ -27,6 +28,10 @@ export default function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/Admin" element={<Admin />} />
+          <Route path="/admin/*" element={<Admin />} />
+          <Route path="/Admin/*" element={<Admin />} />
         </Routes>
       </main>
 

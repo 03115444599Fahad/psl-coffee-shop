@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
-import { products } from '../data/products';
-import { categories, specialCombos, shopConfig, heroSlides } from '../data/categories';
+import { getCmsData } from './Admin';
 import { useCart } from '../context/CartContext';
 
 export default function Home() {
   const { addToCart } = useCart();
+  const [cms, setCms] = useState(() => getCmsData());
+  const { products, categories, specialCombos, shopConfig, heroSlides } = cms;
   const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const refresh = () => setCms(getCmsData());
+    window.addEventListener('psl-cms-updated', refresh);
+    return () => window.removeEventListener('psl-cms-updated', refresh);
+  }, []);
 
   const featuredProducts = products.filter((p) => p.featured).slice(0, 6);
   const mainCategories = categories.filter((c) => c.id !== 'All');

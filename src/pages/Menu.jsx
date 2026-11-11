@@ -2,10 +2,18 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import CategoryTabs from '../components/CategoryTabs';
 import ProductCard from '../components/ProductCard';
-import { products } from '../data/products';
+import { getCmsData } from './Admin';
 
 export default function Menu() {
+  const [cms, setCms] = useState(() => getCmsData());
+  const { products } = cms;
   const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    const refresh = () => setCms(getCmsData());
+    window.addEventListener('psl-cms-updated', refresh);
+    return () => window.removeEventListener('psl-cms-updated', refresh);
+  }, []);
   const initialCat = searchParams.get('category') || 'All';
 
   const [selectedCategory, setSelectedCategory] = useState(initialCat);
@@ -35,7 +43,7 @@ export default function Menu() {
       counts[p.category] = (counts[p.category] || 0) + 1;
     });
     return counts;
-  }, []);
+  }, [products]);
 
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
@@ -51,7 +59,7 @@ export default function Menu() {
 
       return matchesCategory && matchesSearch && matchesAvailability;
     });
-  }, [selectedCategory, searchQuery, onlyAvailable]);
+  }, [products, selectedCategory, searchQuery, onlyAvailable]);
 
   return (
     <div className="py-5">
