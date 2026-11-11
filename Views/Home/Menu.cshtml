@@ -1,0 +1,104 @@
+@model PslCoffeeCms.Models.CmsDatabase
+@{
+    ViewData["Title"] = "Our Menu";
+    var settings = Model.Settings;
+    string selectedCategory = ViewBag.SelectedCategory ?? "All";
+    string searchQuery = ViewBag.SearchQuery ?? "";
+
+    var categories = Model.Categories.OrderBy(c => c.DisplayOrder).ToList();
+    var filtered = Model.MenuItems.Where(m =>
+        (selectedCategory == "All" || m.Category.Equals(selectedCategory, StringComparison.OrdinalIgnoreCase)) &&
+        (string.IsNullOrWhiteSpace(searchQuery) ||
+         m.Name.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+         m.Description.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+         m.Category.Contains(searchQuery, StringComparison.OrdinalIgnoreCase))
+    ).ToList();
+}
+
+<div class="py-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <span class="text-uppercase fw-bold small" style="color: #C58B52;">Freshly Prepared</span>
+            <h1 class="fw-bold mt-1">@settings.CompanyName Menu</h1>
+            <p class="text-muted mx-auto" style="max-width: 580px;">
+                Browse our complete menu of coffee, iced coffee, shakes, margaritas, teas, soups, sandwiches, fries, savouries, and breakfast.
+            </p>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+            <a asp-controller="Home" asp-action="Menu" asp-route-category="All"
+               class="category-pill @(selectedCategory == "All" ? "active" : "")">
+                <i class="bi bi-grid-fill me-1"></i>All (@Model.MenuItems.Count)
+            </a>
+            @foreach (var cat in categories)
+            {
+                var count = Model.MenuItems.Count(m => m.Category.Equals(cat.Name, StringComparison.OrdinalIgnoreCase));
+                <a asp-controller="Home" asp-action="Menu" asp-route-category="@cat.Name"
+                   class="category-pill @(selectedCategory.Equals(cat.Name, StringComparison.OrdinalIgnoreCase) ? "active" : "")">
+                    <i class="bi @cat.Icon me-1"></i>@cat.Name (@count)
+                </a>
+            }
+        </div>
+
+        <!-- Search Bar -->
+        <form method="get" asp-controller="Home" asp-action="Menu" class="card border-0 shadow-sm rounded-4 p-3 mb-4 bg-white">
+            <input type="hidden" name="category" value="@selectedCategory" />
+            <div class="row g-2 align-items-center">
+                <div class="col-md-9">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+                        <input type="search" name="q" value="@searchQuery" class="form-control border-start-0" placeholder="Search coffee, latte, shake, margarita, sandwich, omelette..." />
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex gap-2">
+                    <button type="submit" class="btn btn-psl-primary w-100">Search</button>
+                    @if (!string.IsNullOrWhiteSpace(searchQuery) || selectedCategory != "All")
+                    {
+                        <a asp-controller="Home" asp-action="Menu" class="btn btn-outline-secondary">Reset</a>
+                    }
+                </div>
+            </div>
+        </form>
+
+        <!-- Product Grid -->
+        <div class="row g-4">
+            @foreach (var item in filtered)
+            {
+                <div class="col-sm-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="position-relative" style="height: 200px; overflow: hidden;">
+                            <img src="@item.ImageUrl" alt="@item.Name" class="w-100 h-100" style="object-fit: cover;" />
+                            @if (!item.Available)
+                            {
+                                <span class="badge bg-danger position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">Sold Out</span>
+                            }
+                            else if (!string.IsNullOrWhiteSpace(item.Badge))
+                            {
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill fw-bold">@item.Badge</span>
+                            }
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <div class="small text-muted fw-semibold mb-1">@item.Category</div>
+                            <h5 class="fw-bold mb-2">@item.Name</h5>
+                            <p class="text-muted small flex-grow-1 mb-3">@item.Description</p>
+                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                <span class="price-pill">@settings.Currency @item.Price</span>
+                                @if (item.Available)
+                                {
+                                    <button type="button" class="btn btn-psl-primary btn-sm px-3" onclick="addToCart('@item.Id', '@item.Name.Replace("'", "\\'")', @item.Price)">
+                                        <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                                    </button>
+                                }
+                                else
+                                {
+                                    <button type="button" class="btn btn-secondary btn-sm px-3" disabled>Unavailable</button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

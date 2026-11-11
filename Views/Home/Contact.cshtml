@@ -1,0 +1,151 @@
+@model PslCoffeeCms.Models.CmsDatabase
+@{
+    ViewData["Title"] = "Contact Us";
+    var settings = Model.Settings;
+}
+
+<!-- Luxury Contact Hero Header -->
+<section class="py-5 bg-psl-brown border-bottom border-warning border-opacity-50">
+    <div class="container text-center py-3">
+        <span class="hero-badge mb-3">
+            <i class="bi bi-chat-heart-fill text-warning me-1"></i> WE WOULD LOVE TO HEAR FROM YOU
+        </span>
+        <h1 class="display-4 fw-bold text-white mb-2">Contact @settings.CompanyName</h1>
+        <p class="lead text-light opacity-75 mx-auto mb-0" style="max-width: 620px;">
+            Order directly on WhatsApp, book office deals, or reach out for everyday café inquiries.
+        </p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <!-- Quick Action Highlight Cards -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <a href="tel:@settings.Phone" class="text-decoration-none">
+                    <div class="product-card p-4 text-center h-100">
+                        <div class="mx-auto mb-3 d-inline-flex align-items-center justify-content-center rounded-circle shadow-sm"
+                             style="width: 64px; height: 64px; background: linear-gradient(135deg, #0E2A1E, #1B4B35); color: #D4AF37;">
+                            <i class="bi bi-telephone-outbound-fill fs-3"></i>
+                        </div>
+                        <span class="text-uppercase small fw-bold text-muted">Direct Phone Line</span>
+                        <h4 class="fw-bold mt-1 mb-1 text-dark">@settings.Phone</h4>
+                        <span class="small text-muted">Tap to call our café counter directly</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="https://wa.me/@settings.WhatsAppNumber" target="_blank" class="text-decoration-none">
+                    <div class="product-card p-4 text-center h-100" style="border-color: #25D366;">
+                        <div class="mx-auto mb-3 d-inline-flex align-items-center justify-content-center rounded-circle shadow-sm"
+                             style="width: 64px; height: 64px; background: linear-gradient(135deg, #25D366, #128C7E); color: #fff;">
+                            <i class="bi bi-whatsapp fs-3"></i>
+                        </div>
+                        <span class="text-uppercase small fw-bold text-success">Instant WhatsApp Order</span>
+                        <h4 class="fw-bold mt-1 mb-1 text-dark">@settings.Phone</h4>
+                        <span class="small text-muted">Tap to start an instant WhatsApp chat</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <div class="product-card p-4 text-center h-100">
+                    <div class="mx-auto mb-3 d-inline-flex align-items-center justify-content-center rounded-circle shadow-sm"
+                         style="width: 64px; height: 64px; background: linear-gradient(135deg, #D4AF37, #AA8222); color: #071911;">
+                        <i class="bi bi-geo-alt-fill fs-3"></i>
+                    </div>
+                    <span class="text-uppercase small fw-bold text-muted">Visit Our Café</span>
+                    <h4 class="fw-bold mt-1 mb-1 text-dark">@settings.CompanyName</h4>
+                    <span class="small text-muted">@settings.Address</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+            <!-- Left Brand Showcase Card -->
+            <div class="col-lg-5">
+                <div class="card border-0 rounded-4 p-4 p-lg-5 h-100 shadow-lg bg-psl-brown text-white position-relative overflow-hidden">
+                    <div class="text-center mb-4">
+                        <div class="brand-logo-ring mx-auto mb-3" style="width: 110px; height: 110px;">
+                            <img src="@settings.LogoUrl" alt="@settings.CompanyName" class="rounded-circle w-100 h-100" style="object-fit: cover;" />
+                        </div>
+                        <h2 class="fw-bold mb-1 text-white">@settings.CompanyName</h2>
+                        <div class="small fw-semibold" style="color: var(--psl-gold); letter-spacing: 2px;">POUR • SIP • STAY</div>
+                    </div>
+
+                    <p class="small opacity-85 text-center mb-4">
+                        @settings.AboutParagraph1
+                    </p>
+
+                    <div class="d-grid gap-3 mt-auto">
+                        <div class="p-3 rounded-4" style="background: rgba(255,255,255,0.07); border: 1px solid rgba(212,175,55,0.3);">
+                            <div class="small opacity-75">Call / Voice Order</div>
+                            <a href="tel:@settings.Phone" class="fs-5 fw-bold text-white text-decoration-none">
+                                <i class="bi bi-telephone-fill text-warning me-2"></i>@settings.Phone
+                            </a>
+                        </div>
+                        <div class="p-3 rounded-4" style="background: rgba(255,255,255,0.07); border: 1px solid rgba(212,175,55,0.3);">
+                            <div class="small opacity-75">WhatsApp Order & Support</div>
+                            <a href="https://wa.me/@settings.WhatsAppNumber" target="_blank" class="fs-5 fw-bold text-warning text-decoration-none">
+                                <i class="bi bi-whatsapp text-success me-2"></i>@settings.Phone
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Interactive WhatsApp Composer -->
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 h-100 bg-white" style="border: 1px solid var(--psl-border) !important;">
+                    <span class="text-uppercase fw-bold small" style="color: var(--psl-gold-dark); letter-spacing: 1px;">Direct WhatsApp Concierge</span>
+                    <h2 class="fw-bold mt-1 mb-2">Send a Direct Message</h2>
+                    <p class="text-muted small mb-4">
+                        Fill in your details below and click send to launch a pre-formatted WhatsApp message straight to <strong>@settings.CompanyName (@settings.Phone)</strong>.
+                    </p>
+
+                    <form onsubmit="sendInquiry(event)">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small">Your Full Name</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light"><i class="bi bi-person-fill"></i></span>
+                                    <input type="text" id="inqName" class="form-control" placeholder="e.g. Ali Khan" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small">Inquiry Type</label>
+                                <select id="inqTopic" class="form-select">
+                                    <option value="Quick Cafe Order">Quick Cafe Order</option>
+                                    <option value="Office Deal (Rs. 1599)">Office Deal (Rs. 1599)</option>
+                                    <option value="Tea Break Deal (Rs. 1199)">Tea Break Deal (Rs. 1199)</option>
+                                    <option value="Table Reservation / Feedback">Table Reservation / Feedback</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold small">Your Message or Order Details</label>
+                                <textarea id="inqMsg" rows="4" class="form-control" placeholder="Write your order items, delivery location, or question here..." required></textarea>
+                            </div>
+                            <div class="col-12 pt-2">
+                                <button type="submit" class="btn btn-psl-gold w-100 py-3 fs-6">
+                                    <i class="bi bi-whatsapp me-2"></i>Send Message via WhatsApp (@settings.Phone)
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        function sendInquiry(e) {
+            e.preventDefault();
+            const n = document.getElementById('inqName').value;
+            const topic = document.getElementById('inqTopic').value;
+            const m = document.getElementById('inqMsg').value;
+            const text = `*@settings.CompanyName — ${topic}*\nCustomer Name: ${n}\nDetails: ${m}`;
+            window.open(`https://wa.me/@settings.WhatsAppNumber?text=${encodeURIComponent(text)}`, '_blank');
+        }
+    </script>
+}

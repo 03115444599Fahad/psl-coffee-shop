@@ -1,0 +1,828 @@
+{
+  "Settings": {
+    "CompanyName": "PSL Coffee Bar",
+    "BrandFull": "Pour, Sip \u0026 Leaf Coffee Shop",
+    "Tagline": "Pour \u2022 Sip \u2022 Stay \u2014 Welcome to PSL, Your Everyday Cafe",
+    "LogoUrl": "/logo.png",
+    "Phone": "03400440463",
+    "WhatsAppNumber": "923400440463",
+    "Currency": "Rs.",
+    "Address": "PSL Coffee Bar \u2014 Pour, Sip \u0026 Leaf, Pakistan",
+    "AboutTitle": "Welcome to PSL \u2013 Your Everyday Cafe",
+    "AboutParagraph1": "At PSL, we believe that great coffee is more than just a drink \u2013 it\u0027s an experience, a moment of relaxation and a reason to smile.",
+    "AboutParagraph2": "Our journey is inspired by a passion for premium coffee, delicious food and the simple pleasure of bringing people together. We aim to create a welcoming space where every cup tells a story, every flavour creates a memory and every visit feels special.",
+    "AboutParagraph3": "From rich, freshly prepared Espresso and creamy Cappuccino to our signature Spanish Lattes, refreshing Margaritas, flavorful shakes and delicious food, we bring together quality, taste and creativity under one roof.",
+    "AdminUsername": "admin",
+    "AdminPassword": "psl123"
+  },
+  "Sliders": [
+    {
+      "Id": "slide-1",
+      "Title": "Premium Coffee Experience",
+      "Subtitle": "Carefully prepared coffee with rich flavour, beautiful presentation and attention to every detail.",
+      "Badge": "PSL Coffee Bar \u2022 Pour, Sip \u0026 Leaf",
+      "ImageUrl": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format\u0026fit=crop\u0026w=1000\u0026q=80",
+      "DisplayOrder": 1
+    },
+    {
+      "Id": "slide-2",
+      "Title": "Delicious Food \u0026 Refreshments",
+      "Subtitle": "A delightful selection of breakfast, sandwiches, snacks, shakes and refreshing drinks.",
+      "Badge": "Freshly Prepared Every Day",
+      "ImageUrl": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format\u0026fit=crop\u0026w=1000\u0026q=80",
+      "DisplayOrder": 2
+    },
+    {
+      "Id": "slide-3",
+      "Title": "Comfort \u0026 Good Vibes",
+      "Subtitle": "A welcoming atmosphere designed for conversations, relaxation and memorable moments.",
+      "Badge": "Pour \u2022 Sip \u2022 Stay",
+      "ImageUrl": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format\u0026fit=crop\u0026w=1000\u0026q=80",
+      "DisplayOrder": 3
+    },
+    {
+      "Id": "slide-4",
+      "Title": "Passion for Quality",
+      "Subtitle": "We focus on quality ingredients, careful preparation and friendly service in every order.",
+      "Badge": "Our Everyday Promise",
+      "ImageUrl": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format\u0026fit=crop\u0026w=1000\u0026q=80",
+      "DisplayOrder": 4
+    }
+  ],
+  "Categories": [
+    {
+      "Id": "Coffee",
+      "Name": "Coffee",
+      "Icon": "bi-cup-hot-fill",
+      "Description": "Espresso, Cappuccino, Latte, Flat White, Mocha, Caramel/Hazelnut/Vanilla Lattes, Cortado, Affogato \u0026 Hot Chocolate",
+      "DisplayOrder": 1
+    },
+    {
+      "Id": "Iced Coffee",
+      "Name": "Iced Coffee",
+      "Icon": "bi-cup-straw",
+      "Description": "Chilled Iced Americano, Iced Spanish Latte, Iced Caramel, Hazelnut, Vanilla Latte \u0026 Iced Mocha",
+      "DisplayOrder": 2
+    },
+    {
+      "Id": "Shakes",
+      "Name": "Shakes",
+      "Icon": "bi-lightning-charge-fill",
+      "Description": "Apple, Banana, Mango Shakes, Morning Power Shake (PSL), and Dates \u0026 Almond Shake",
+      "DisplayOrder": 3
+    },
+    {
+      "Id": "Ice Cream Shakes",
+      "Name": "Ice Cream Shakes",
+      "Icon": "bi-snow2",
+      "Description": "Vanilla, Chocolate, Strawberry, and Oreo Ice Cream Shakes",
+      "DisplayOrder": 4
+    },
+    {
+      "Id": "Margarita",
+      "Name": "Margarita",
+      "Icon": "bi-droplet-half",
+      "Description": "Mint Margarita, Strawberry Margarita, and Peach Margarita",
+      "DisplayOrder": 5
+    },
+    {
+      "Id": "Iced Tea",
+      "Name": "Iced Tea",
+      "Icon": "bi-thermometer-snow",
+      "Description": "Peach Iced Tea, Lemon Iced Tea, and Strawberry Iced Tea",
+      "DisplayOrder": 6
+    },
+    {
+      "Id": "Hot Tea",
+      "Name": "Hot Tea",
+      "Icon": "bi-cup-fill",
+      "Description": "Roasted Tea, Karak Chai, Green Tea, and Mint Tea",
+      "DisplayOrder": 7
+    },
+    {
+      "Id": "Soups",
+      "Name": "Soups",
+      "Icon": "bi-fire",
+      "Description": "Hot \u0026 Sour Soup and Chicken Corn Soup",
+      "DisplayOrder": 8
+    },
+    {
+      "Id": "Cold Sandwiches",
+      "Name": "Cold Sandwiches",
+      "Icon": "bi-layers-fill",
+      "Description": "Club Sandwich, Egg \u0026 Cheese, Plain Chicken, Vegetable, and PSL Sixer Sandwich",
+      "DisplayOrder": 9
+    },
+    {
+      "Id": "Fries",
+      "Name": "Fries",
+      "Icon": "bi-basket-fill",
+      "Description": "French Fries, PSL Free Hit Loaded Fries, and Masala Fries",
+      "DisplayOrder": 10
+    },
+    {
+      "Id": "Savouries",
+      "Name": "Savouries",
+      "Icon": "bi-basket2-fill",
+      "Description": "Chicken Stripes \u002B Fries, 4 Spring Roll with Mint Sauce, and 4 Chicken \u0026 Jalape\u00F1o Samosa",
+      "DisplayOrder": 11
+    },
+    {
+      "Id": "Breakfast",
+      "Name": "Breakfast",
+      "Icon": "bi-sunrise-fill",
+      "Description": "Plain, Vegetables \u0026 Mushroom Omelettes, French Toast, Sunny Eggs, Pan Cakes, and Waffles",
+      "DisplayOrder": 12
+    }
+  ],
+  "MenuItems": [
+    {
+      "Id": "c-01",
+      "Name": "Americano",
+      "Category": "Coffee",
+      "Description": "Rich espresso shots topped with hot water for a smooth black coffee.",
+      "Price": 499,
+      "ImageUrl": "https://images.unsplash.com/photo-1551030173-122aabc4489c?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-02",
+      "Name": "Cappuccino",
+      "Category": "Coffee",
+      "Description": "Espresso balanced with steamed milk and velvety micro-foam.",
+      "Price": 599,
+      "ImageUrl": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": true,
+      "Badge": "Bestseller"
+    },
+    {
+      "Id": "c-03",
+      "Name": "Latte",
+      "Category": "Coffee",
+      "Description": "Smooth espresso combined with generous steamed milk.",
+      "Price": 599,
+      "ImageUrl": "https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-04",
+      "Name": "Flat White",
+      "Category": "Coffee",
+      "Description": "Velvety micro-foamed milk poured over a bold double ristretto.",
+      "Price": 599,
+      "ImageUrl": "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-05",
+      "Name": "Mocha",
+      "Category": "Coffee",
+      "Description": "Rich espresso blended with decadent chocolate and steamed milk.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-06",
+      "Name": "Caramel Latte",
+      "Category": "Coffee",
+      "Description": "Smooth espresso swirled with steamed milk and buttery caramel.",
+      "Price": 650,
+      "ImageUrl": "https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-07",
+      "Name": "Hazelnut Latte",
+      "Category": "Coffee",
+      "Description": "Roasted hazelnut infused into smooth espresso and steamed milk.",
+      "Price": 650,
+      "ImageUrl": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-08",
+      "Name": "Vanilla Latte",
+      "Category": "Coffee",
+      "Description": "Classic espresso and steamed milk sweetened with vanilla.",
+      "Price": 650,
+      "ImageUrl": "https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-09",
+      "Name": "Espresso (Single Shot)",
+      "Category": "Coffee",
+      "Description": "Pure, concentrated shot of freshly ground espresso.",
+      "Price": 399,
+      "ImageUrl": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-10",
+      "Name": "Macchiato",
+      "Category": "Coffee",
+      "Description": "Bold espresso shot marked with a dollop of foamed milk.",
+      "Price": 450,
+      "ImageUrl": "https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-11",
+      "Name": "Piccolo",
+      "Category": "Coffee",
+      "Description": "Ristretto shot topped with warm silky milk.",
+      "Price": 499,
+      "ImageUrl": "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-12",
+      "Name": "Cortado",
+      "Category": "Coffee",
+      "Description": "Equal parts rich espresso and warm textured milk.",
+      "Price": 499,
+      "ImageUrl": "https://images.unsplash.com/photo-1514066558159-fc8c737ef259?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-13",
+      "Name": "Affogato",
+      "Category": "Coffee",
+      "Description": "Creamy vanilla ice cream topped with a hot shot of espresso.",
+      "Price": 599,
+      "ImageUrl": "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-14",
+      "Name": "Extra Shot",
+      "Category": "Coffee",
+      "Description": "Add an extra freshly pulled espresso shot to any drink.",
+      "Price": 150,
+      "ImageUrl": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "c-15",
+      "Name": "Hot Chocolate",
+      "Category": "Coffee",
+      "Description": "Velvety steamed milk blended with rich cocoa.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "ic-01",
+      "Name": "Iced Americano",
+      "Category": "Iced Coffee",
+      "Description": "Freshly pulled espresso poured over chilled water and ice.",
+      "Price": 599,
+      "ImageUrl": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "ic-02",
+      "Name": "Iced Hazelnut Latte",
+      "Category": "Iced Coffee",
+      "Description": "Chilled milk and bold espresso with roasted hazelnut over ice.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "ic-03",
+      "Name": "Iced Vanilla Latte",
+      "Category": "Iced Coffee",
+      "Description": "Rich espresso, cold milk, and sweet vanilla syrup over ice.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "ic-04",
+      "Name": "Iced Spanish Latte",
+      "Category": "Iced Coffee",
+      "Description": "Signature sweetened condensed milk \u0026 fresh milk iced espresso latte.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": true,
+      "Badge": "Signature"
+    },
+    {
+      "Id": "ic-05",
+      "Name": "Iced Caramel Latte",
+      "Category": "Iced Coffee",
+      "Description": "Chilled espresso and milk swirled with golden caramel sauce.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "ic-06",
+      "Name": "Iced Mocha",
+      "Category": "Iced Coffee",
+      "Description": "Espresso, rich chocolate ganache, and cold milk over ice.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sh-01",
+      "Name": "Apple Shake",
+      "Category": "Shakes",
+      "Description": "Fresh crisp apples blended with chilled full-cream milk.",
+      "Price": 750,
+      "ImageUrl": "https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sh-02",
+      "Name": "Banana Shake",
+      "Category": "Shakes",
+      "Description": "Ripe bananas blended thick with chilled creamy milk.",
+      "Price": 750,
+      "ImageUrl": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sh-03",
+      "Name": "Mango Shake",
+      "Category": "Shakes",
+      "Description": "Sweet mango blended with chilled full-cream milk.",
+      "Price": 750,
+      "ImageUrl": "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sh-04",
+      "Name": "Morning Power Shake (PSL)",
+      "Category": "Shakes",
+      "Description": "Banana \u002B Dates \u002B Almond \u002B Cashew \u002B Walnut \u002B Milk / Breakfast-energy shake.",
+      "Price": 999,
+      "ImageUrl": "https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": true,
+      "Badge": "PSL Power"
+    },
+    {
+      "Id": "sh-05",
+      "Name": "Dates and Almond Shake",
+      "Category": "Shakes",
+      "Description": "Rich dates and crunchy almonds blended with chilled milk.",
+      "Price": 800,
+      "ImageUrl": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "ics-01",
+      "Name": "Vanilla Ice Cream Shake",
+      "Category": "Ice Cream Shakes",
+      "Description": "Thick and creamy vanilla bean ice cream shake.",
+      "Price": 499,
+      "ImageUrl": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "ics-02",
+      "Name": "Chocolate Ice Cream Shake",
+      "Category": "Ice Cream Shakes",
+      "Description": "Decadent chocolate ice cream blended with milk.",
+      "Price": 499,
+      "ImageUrl": "https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "ics-03",
+      "Name": "Strawberry Ice Cream Shake",
+      "Category": "Ice Cream Shakes",
+      "Description": "Creamy strawberry ice cream blended with milk.",
+      "Price": 499,
+      "ImageUrl": "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "ics-04",
+      "Name": "Oreo Ice Cream Shake",
+      "Category": "Ice Cream Shakes",
+      "Description": "Crunchy Oreo cookies blended with vanilla ice cream and milk.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "mg-01",
+      "Name": "Mint Margarita",
+      "Category": "Margarita",
+      "Description": "Fresh garden mint leaves, zesty lime juice, crushed ice, and soda.",
+      "Price": 599,
+      "ImageUrl": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": true,
+      "Badge": "Refresher"
+    },
+    {
+      "Id": "mg-02",
+      "Name": "Strawberry Margarita",
+      "Category": "Margarita",
+      "Description": "Sweet strawberry blended with lime, crushed ice, and fizz.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "mg-03",
+      "Name": "Peach Margarita",
+      "Category": "Margarita",
+      "Description": "Juicy peach nectar blended with lime, mint, and crushed ice.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "it-01",
+      "Name": "Peach Iced Tea",
+      "Category": "Iced Tea",
+      "Description": "Chilled brewed tea infused with sweet peach flavour over ice.",
+      "Price": 599,
+      "ImageUrl": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "it-02",
+      "Name": "Lemon Iced Tea",
+      "Category": "Iced Tea",
+      "Description": "Crisp black tea chilled over ice with fresh lemon.",
+      "Price": 499,
+      "ImageUrl": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "it-03",
+      "Name": "Strawberry Iced Tea",
+      "Category": "Iced Tea",
+      "Description": "Freshly brewed iced tea infused with strawberry essence.",
+      "Price": 599,
+      "ImageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "ht-01",
+      "Name": "Roasted Tea",
+      "Category": "Hot Tea",
+      "Description": "Deep, caramelized roasted tea leaves simmered to perfection.",
+      "Price": 350,
+      "ImageUrl": "https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "ht-02",
+      "Name": "Karak Chai",
+      "Category": "Hot Tea",
+      "Description": "Traditional strong slow-simmered milk tea with green cardamom.",
+      "Price": 200,
+      "ImageUrl": "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": true,
+      "Badge": "House Special"
+    },
+    {
+      "Id": "ht-03",
+      "Name": "Green Tea",
+      "Category": "Hot Tea",
+      "Description": "Soothing green tea steeped with cardamom.",
+      "Price": 180,
+      "ImageUrl": "https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "ht-04",
+      "Name": "Mint Tea",
+      "Category": "Hot Tea",
+      "Description": "Refreshing herbal infusion steeped with fresh mint leaves.",
+      "Price": 180,
+      "ImageUrl": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sp-01",
+      "Name": "Hot \u0026 Sour Soup",
+      "Category": "Soups",
+      "Description": "Tangy, spicy broth loaded with shredded chicken, vegetables, and egg.",
+      "Price": 499,
+      "ImageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sp-02",
+      "Name": "Chicken Corn Soup",
+      "Category": "Soups",
+      "Description": "Comforting chicken broth simmered with sweet corn, chicken, and egg drop.",
+      "Price": 499,
+      "ImageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sw-01",
+      "Name": "Club Sandwich",
+      "Category": "Cold Sandwiches",
+      "Description": "Triple-decker sandwich with chicken, egg, cheese, lettuce, and mayo.",
+      "Price": 750,
+      "ImageUrl": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": true,
+      "Badge": "Chef Special"
+    },
+    {
+      "Id": "sw-02",
+      "Name": "Egg and Cheese Sandwich",
+      "Category": "Cold Sandwiches",
+      "Description": "Soft bread layered with seasoned egg and cheddar cheese.",
+      "Price": 450,
+      "ImageUrl": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sw-03",
+      "Name": "Plain Chicken Sandwich",
+      "Category": "Cold Sandwiches",
+      "Description": "Shredded tender chicken in seasoned mayo between soft bread.",
+      "Price": 420,
+      "ImageUrl": "https://images.unsplash.com/photo-1554433607-66b5efe9d304?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sw-04",
+      "Name": "Vegetable Sandwich",
+      "Category": "Cold Sandwiches",
+      "Description": "Fresh cucumber, tomatoes, coleslaw, and herb spread.",
+      "Price": 350,
+      "ImageUrl": "https://images.unsplash.com/photo-1540713434306-58505cf1b6fc?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sw-05",
+      "Name": "PSL Sixer Sandwich",
+      "Category": "Cold Sandwiches",
+      "Description": "Signature PSL house sandwich packed with chicken, cheese, and special sauce.",
+      "Price": 499,
+      "ImageUrl": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": "PSL Special"
+    },
+    {
+      "Id": "fr-01",
+      "Name": "French Fries",
+      "Category": "Fries",
+      "Description": "Crispy golden salted potato fries served hot.",
+      "Price": 499,
+      "ImageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "fr-02",
+      "Name": "PSL Free Hit Loaded Fries",
+      "Category": "Fries",
+      "Description": "Golden fries loaded with cheese sauce, signature drizzle, and jalape\u00F1os.",
+      "Price": 599,
+      "ImageUrl": "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": "PSL Signature"
+    },
+    {
+      "Id": "fr-03",
+      "Name": "Masala Fries",
+      "Category": "Fries",
+      "Description": "Crispy fries tossed in our zesty chaat masala spice blend.",
+      "Price": 530,
+      "ImageUrl": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sv-01",
+      "Name": "Chicken Stripes \u002B Fries",
+      "Category": "Savouries",
+      "Description": "Crispy breaded chicken strips served with hot French fries.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sv-02",
+      "Name": "4 Spring Roll with Mint Sauce",
+      "Category": "Savouries",
+      "Description": "4 crispy golden rolls served with fresh mint sauce.",
+      "Price": 599,
+      "ImageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "sv-03",
+      "Name": "4 Chicken \u0026 Jalape\u00F1o Samosa",
+      "Category": "Savouries",
+      "Description": "4 crispy samosas filled with spiced minced chicken and jalape\u00F1os.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "bf-01",
+      "Name": "Plain Omelette",
+      "Category": "Breakfast",
+      "Description": "Fluffy farm-fresh eggs seasoned with salt and black pepper.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "bf-02",
+      "Name": "Vegetables Omelette",
+      "Category": "Breakfast",
+      "Description": "Fluffy omelette loaded with tomatoes, onions, bell peppers, and herbs.",
+      "Price": 750,
+      "ImageUrl": "https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "bf-03",
+      "Name": "French Toast",
+      "Category": "Breakfast",
+      "Description": "Golden brioche slices dipped in cinnamon-vanilla egg batter.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "bf-04",
+      "Name": "Sunny Eggs",
+      "Category": "Breakfast",
+      "Description": "Sunny-side-up eggs with runny golden yolks.",
+      "Price": 599,
+      "ImageUrl": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "bf-05",
+      "Name": "Mushroom Omelette",
+      "Category": "Breakfast",
+      "Description": "Savory omelette folded with saut\u00E9ed mushrooms and melted cheese.",
+      "Price": 899,
+      "ImageUrl": "https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "bf-06",
+      "Name": "Pan Cakes",
+      "Category": "Breakfast",
+      "Description": "Stack of fluffy golden pancakes served with butter and syrup.",
+      "Price": 699,
+      "ImageUrl": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    },
+    {
+      "Id": "bf-07",
+      "Name": "Waffles",
+      "Category": "Breakfast",
+      "Description": "Crispy golden Belgian waffles with sweet toppings.",
+      "Price": 730,
+      "ImageUrl": "https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+      "Available": true,
+      "Featured": false,
+      "Badge": null
+    }
+  ],
+  "Deals": [
+    {
+      "Id": "deal-001",
+      "Title": "OFFICE DEAL",
+      "Price": 1599,
+      "Badge": "Complete Office Combo",
+      "Items": [
+        "1 Coffee",
+        "1 Sweet",
+        "2 Mini Samosa (Chicken \u0026 Jalape\u00F1o)",
+        "French Fries"
+      ],
+      "Active": true
+    },
+    {
+      "Id": "deal-002",
+      "Title": "TEA BREAK DEAL",
+      "Price": 1199,
+      "Badge": "Best Value Tea Break",
+      "Items": [
+        "2 Chicken \u0026 Jalape\u00F1o Samosa (Mini)",
+        "Vegetable Spring Rolls (2 pcs)",
+        "French Fries",
+        "One Hot Coffee (Cappuccino)"
+      ],
+      "Active": true
+    }
+  ]
+}
