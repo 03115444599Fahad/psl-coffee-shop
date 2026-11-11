@@ -9,16 +9,19 @@ export default function Footer() {
         <div className="row g-4 pb-4 border-bottom border-secondary border-opacity-25">
           <div className="col-lg-4 col-md-6">
             <div className="d-flex align-items-center gap-2 mb-3">
-              <span
-                className="d-inline-flex align-items-center justify-content-center rounded-3"
-                style={{ width: '36px', height: '36px', backgroundColor: '#C58B52', color: '#fff' }}
-              >
-                <i className="bi bi-cup-hot-fill"></i>
-              </span>
-              <h4 className="mb-0 text-white">{shopConfig.name}</h4>
+              <img
+                src={shopConfig.logo || '/logo.png'}
+                alt={`${shopConfig.name} Monogram`}
+                className="rounded-circle border border-warning"
+                style={{ width: '44px', height: '44px', objectFit: 'cover' }}
+              />
+              <div>
+                <h4 className="mb-0 text-white">{shopConfig.name}</h4>
+                <small style={{ color: '#C58B52', letterSpacing: '0.8px' }}>Pour, Sip & Leaf • Your Everyday Cafe</small>
+              </div>
             </div>
             <p className="small text-light opacity-75 mb-3">
-              Freshly roasted Arabica coffee, traditional slow-brewed Karak Doodh Patti, and crispy snacks. Browse online and send your order straight to our counter via WhatsApp.
+              At PSL, we believe that great coffee is more than just a drink – it's an experience, a moment of relaxation and a reason to smile. From rich Espresso and signature Spanish Lattes to refreshing Margaritas, shakes, and delicious food.
             </p>
             <div className="d-flex gap-2">
               <a

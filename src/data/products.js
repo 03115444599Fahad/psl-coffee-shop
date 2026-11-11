@@ -2,272 +2,788 @@ export const products = [
   // ================= COFFEE =================
   {
     id: 'coffee-001',
-    name: 'Classic Double Espresso',
+    name: 'Americano',
     category: 'Coffee',
-    description: 'A bold, full-bodied double shot of freshly ground 100% Arabica beans with a rich golden crema.',
-    longDescription: 'Pulled at precision temperature and pressure, our Classic Double Espresso delivers notes of dark chocolate, roasted hazelnut, and a clean caramel finish. Ideal for an instant energy boost.',
-    price: 350,
-    image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=800&q=80',
-    available: true,
-    featured: false,
-    badge: 'Pure Energy',
-    sizes: [
-      { label: 'Single Shot', price: 280 },
-      { label: 'Double Shot (Standard)', price: 350 }
-    ]
-  },
-  {
-    id: 'coffee-002',
-    name: 'Caffè Americano',
-    category: 'Coffee',
-    description: 'Rich double espresso topped with hot filtered water for a smooth, clean cup of black coffee.',
-    longDescription: 'Enjoy the complexity of espresso with the smooth sipping experience of filter coffee. Available hot or over ice at no extra charge.',
-    price: 420,
+    description: 'Rich espresso shots topped with hot water for a smooth, aromatic black coffee.',
+    longDescription: 'Carefully pulled espresso combined with filtered hot water for a clean, bold cup.',
+    price: 499,
     image: 'https://images.unsplash.com/photo-1551030173-122aabc4489c?auto=format&fit=crop&w=800&q=80',
     available: true,
     featured: false,
-    sizes: [
-      { label: 'Regular (8 oz)', price: 420 },
-      { label: 'Large (12 oz)', price: 500 }
-    ]
+    sizes: [{ label: 'Standard', price: 499 }, { label: 'With Extra Shot (+Rs. 150)', price: 649 }]
   },
   {
-    id: 'coffee-003',
-    name: 'Artisan Cappuccino',
+    id: 'coffee-002',
+    name: 'Cappuccino',
     category: 'Coffee',
-    description: 'Espresso balanced with steamed milk and a thick, velvety layer of micro-foam dusted with cocoa.',
-    longDescription: 'Our signature Cappuccino combines a double ristretto shot with silky textured milk and airy foam. Topped with optional Belgian cocoa or cinnamon dust.',
-    price: 520,
+    description: 'Freshly pulled espresso balanced with steamed milk and a thick, velvety layer of micro-foam.',
+    longDescription: 'Our signature creamy Cappuccino crafted with rich espresso, silky steamed milk, and airy foam.',
+    price: 599,
     image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80',
     available: true,
     featured: true,
     badge: 'Bestseller',
-    sizes: [
-      { label: 'Regular (8 oz)', price: 520 },
-      { label: 'Large (12 oz)', price: 620 }
-    ]
+    sizes: [{ label: 'Standard', price: 599 }, { label: 'With Extra Shot (+Rs. 150)', price: 749 }]
   },
   {
-    id: 'coffee-004',
-    name: 'Caramel Café Latte',
+    id: 'coffee-003',
+    name: 'Latte',
     category: 'Coffee',
-    description: 'Smooth espresso swirled with creamy steamed milk and house-made warm caramel drizzle.',
-    longDescription: 'Crafted for those who love a creamy, comforting cup. Rich espresso meets velvety steamed milk, finished with our signature buttery caramel sauce.',
-    price: 560,
+    description: 'Smooth espresso combined with generous steamed milk and a light layer of foam.',
+    longDescription: 'A comforting everyday classic pairing rich espresso with velvety steamed milk.',
+    price: 599,
     image: 'https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=800&q=80',
     available: true,
     featured: false,
-    sizes: [
-      { label: 'Regular (8 oz)', price: 560 },
-      { label: 'Large (12 oz)', price: 660 }
-    ]
+    sizes: [{ label: 'Standard', price: 599 }, { label: 'With Extra Shot (+Rs. 150)', price: 749 }]
+  },
+  {
+    id: 'coffee-004',
+    name: 'Flat White',
+    category: 'Coffee',
+    description: 'Velvety micro-foamed milk poured over a bold double ristretto shot.',
+    longDescription: 'Silky, rich, and espresso-forward with glossy micro-foam.',
+    price: 599,
+    image: 'https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 599 }, { label: 'With Extra Shot (+Rs. 150)', price: 749 }]
   },
   {
     id: 'coffee-005',
-    name: 'Belgian Café Mocha',
+    name: 'Mocha',
     category: 'Coffee',
-    description: 'Espresso blended with melted dark chocolate ganache, steamed milk, and whipped cream.',
-    longDescription: 'Where rich coffee meets decadent chocolate. We melt dark Belgian chocolate into hot espresso before folding in steamed milk and a light crown of cream.',
-    price: 600,
+    description: 'Rich espresso blended with decadent chocolate sauce and creamy steamed milk.',
+    longDescription: 'Where specialty coffee meets rich chocolate indulgence.',
+    price: 699,
     image: 'https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=800&q=80',
     available: true,
     featured: false,
-    sizes: [
-      { label: 'Regular (8 oz)', price: 600 },
-      { label: 'Large (12 oz)', price: 700 }
-    ]
+    sizes: [{ label: 'Standard', price: 699 }, { label: 'With Extra Shot (+Rs. 150)', price: 849 }]
   },
   {
     id: 'coffee-006',
-    name: 'Signature Frappe Cold Coffee',
+    name: 'Caramel Latte',
     category: 'Coffee',
-    description: 'Chilled double espresso blended with vanilla ice cream, milk, and chocolate swirl.',
-    longDescription: 'The ultimate refresher for warm days. Blended thick with real espresso, full-cream milk, and a scoop of vanilla bean ice cream inside a chocolate-drizzled cup.',
-    price: 620,
+    description: 'Smooth espresso swirled with steamed milk and buttery caramel syrup.',
+    longDescription: 'Crafted with freshly pulled espresso, textured milk, and warm caramel drizzle.',
+    price: 650,
+    image: 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 650 }, { label: 'With Extra Shot (+Rs. 150)', price: 800 }]
+  },
+  {
+    id: 'coffee-007',
+    name: 'Hazelnut Latte',
+    category: 'Coffee',
+    description: 'Aromatic roasted hazelnut infused into smooth espresso and creamy steamed milk.',
+    longDescription: 'Nutty, warm, and comforting latte with premium hazelnut flavour.',
+    price: 650,
+    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 650 }, { label: 'With Extra Shot (+Rs. 150)', price: 800 }]
+  },
+  {
+    id: 'coffee-008',
+    name: 'Vanilla Latte',
+    category: 'Coffee',
+    description: 'Classic espresso and steamed milk delicately sweetened with Madagascar vanilla.',
+    longDescription: 'Smooth, fragrant vanilla balanced with freshly brewed espresso and steamed milk.',
+    price: 650,
+    image: 'https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 650 }, { label: 'With Extra Shot (+Rs. 150)', price: 800 }]
+  },
+  {
+    id: 'coffee-009',
+    name: 'Espresso (Single Shot)',
+    category: 'Coffee',
+    description: 'Pure, concentrated shot of freshly ground espresso with a rich golden crema.',
+    longDescription: 'Rich, freshly prepared Espresso pulled with precision for maximum aroma and body.',
+    price: 399,
+    image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    badge: 'Pure Espresso',
+    sizes: [{ label: 'Single Shot', price: 399 }, { label: 'Double Shot (+Rs. 150)', price: 549 }]
+  },
+  {
+    id: 'coffee-010',
+    name: 'Macchiato',
+    category: 'Coffee',
+    description: 'Bold espresso shot marked with a dollop of velvety foamed milk.',
+    longDescription: 'Traditional espresso macchiato offering intense coffee flavour softened by a touch of milk foam.',
+    price: 450,
+    image: 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 450 }]
+  },
+  {
+    id: 'coffee-011',
+    name: 'Piccolo',
+    category: 'Coffee',
+    description: 'Ristretto shot topped with warm silky milk in a demitasse glass.',
+    longDescription: 'A small but mighty milk coffee that highlights the richness of the espresso roast.',
+    price: 499,
+    image: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 499 }]
+  },
+  {
+    id: 'coffee-012',
+    name: 'Cortado',
+    category: 'Coffee',
+    description: 'Equal parts rich espresso and warm textured milk for balanced smoothness.',
+    longDescription: 'Perfect harmony between bold espresso acidity and sweet steamed milk.',
+    price: 499,
+    image: 'https://images.unsplash.com/photo-1514066558159-fc8c737ef259?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 499 }]
+  },
+  {
+    id: 'coffee-013',
+    name: 'Affogato',
+    category: 'Coffee',
+    description: 'Creamy vanilla ice cream drowned in a piping hot shot of freshly pulled espresso.',
+    longDescription: 'A decadent dessert-coffee treat combining cold vanilla bean ice cream with hot espresso.',
+    price: 599,
+    image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 599 }]
+  },
+  {
+    id: 'coffee-014',
+    name: 'Extra Shot',
+    category: 'Coffee',
+    description: 'Add an extra freshly pulled espresso shot to any drink for an added boost.',
+    longDescription: 'Pure espresso shot add-on prepared from our house coffee blend.',
+    price: 150,
+    image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Single Add-on Shot', price: 150 }]
+  },
+  {
+    id: 'coffee-015',
+    name: 'Hot Chocolate',
+    category: 'Coffee',
+    description: 'Velvety steamed milk blended with rich cocoa and topped with marshmellow/cream foam.',
+    longDescription: 'Thick, comforting hot chocolate made for chocolate lovers.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 699 }]
+  },
+
+  // ================= ICED COFFEE =================
+  {
+    id: 'iced-coffee-001',
+    name: 'Iced Americano',
+    category: 'Iced Coffee',
+    description: 'Freshly pulled espresso poured over chilled water and crystal-clear ice.',
+    longDescription: 'Crisp, bold, and deeply refreshing iced black coffee.',
+    price: 599,
+    image: 'https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 599 }]
+  },
+  {
+    id: 'iced-coffee-002',
+    name: 'Iced Hazelnut Latte',
+    category: 'Iced Coffee',
+    description: 'Chilled milk and bold espresso sweetened with roasted hazelnut over ice.',
+    longDescription: 'Smooth iced latte with fragrant hazelnut notes.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 699 }]
+  },
+  {
+    id: 'iced-coffee-003',
+    name: 'Iced Vanilla Latte',
+    category: 'Iced Coffee',
+    description: 'Rich espresso, cold milk, and sweet vanilla syrup served over ice.',
+    longDescription: 'Cool, creamy, and lightly floral vanilla iced latte.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 699 }]
+  },
+  {
+    id: 'iced-coffee-004',
+    name: 'Iced Spanish Latte',
+    category: 'Iced Coffee',
+    description: 'Our signature sweetened condensed milk & fresh milk iced espresso latte.',
+    longDescription: 'A PSL signature favorite! Textured cold milk, sweet condensed milk, and bold espresso over ice.',
+    price: 699,
     image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80',
     available: true,
     featured: true,
-    badge: 'Customer Favorite',
-    sizes: [
-      { label: 'Regular (12 oz)', price: 620 },
-      { label: 'Jumbo (16 oz)', price: 740 }
-    ]
+    badge: 'Signature Drink',
+    sizes: [{ label: 'Regular', price: 699 }]
+  },
+  {
+    id: 'iced-coffee-005',
+    name: 'Iced Caramel Latte',
+    category: 'Iced Coffee',
+    description: 'Chilled espresso and milk swirled with rich golden caramel sauce over ice.',
+    longDescription: 'Sweet buttery caramel balanced by bold espresso and cold milk.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 699 }]
+  },
+  {
+    id: 'iced-coffee-006',
+    name: 'Iced Mocha',
+    category: 'Iced Coffee',
+    description: 'Espresso, rich chocolate ganache, and cold milk served over ice.',
+    longDescription: 'Chilled chocolate-espresso indulgence for warm days.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 699 }]
   },
 
-  // ================= TEA =================
+  // ================= SHAKES =================
   {
-    id: 'tea-001',
-    name: 'Special Karak Doodh Patti',
-    category: 'Tea',
-    description: 'Traditional Pakistani tea slow-simmered in pure full-cream milk with crushed green cardamom.',
-    longDescription: 'Our pride and joy! Premium Assam tea leaves brewed directly in rich, simmering milk with aromatic green elaichi until thick, golden, and deeply comforting.',
-    price: 220,
+    id: 'shake-001',
+    name: 'Apple Shake',
+    category: 'Shakes',
+    description: 'Fresh crisp apples blended with chilled full-cream milk.',
+    longDescription: 'Naturally sweet and refreshing fresh apple milk shake.',
+    price: 750,
+    image: 'https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 750 }]
+  },
+  {
+    id: 'shake-002',
+    name: 'Banana Shake',
+    category: 'Shakes',
+    description: 'Ripe bananas blended thick with chilled creamy milk.',
+    longDescription: 'Classic energizing banana milk shake blended fresh to order.',
+    price: 750,
+    image: 'https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 750 }]
+  },
+  {
+    id: 'shake-003',
+    name: 'Mango Shake',
+    category: 'Shakes',
+    description: 'Sweet mango pulp blended with chilled full-cream milk.',
+    longDescription: 'Rich, tropical mango shake bursting with fruity sweetness.',
+    price: 750,
+    image: 'https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 750 }]
+  },
+  {
+    id: 'shake-004',
+    name: 'Morning Power Shake (PSL)',
+    category: 'Shakes',
+    description: 'Banana + Dates + Almond + Cashew + Walnut + Milk / Breakfast-energy shake.',
+    longDescription: 'Our powerhouse PSL signature shake! Blended with ripe banana, premium dates, roasted almonds, cashews, walnuts, and pure milk for all-day breakfast energy.',
+    price: 999,
+    image: 'https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: true,
+    badge: 'PSL Power Special',
+    sizes: [{ label: 'Power Glass', price: 999 }]
+  },
+  {
+    id: 'shake-005',
+    name: 'Dates and Almond Shake',
+    category: 'Shakes',
+    description: 'Rich Medjool dates and crunchy almonds blended with chilled milk.',
+    longDescription: 'Naturally sweet, nutty, and wholesome dates & almond milk shake.',
+    price: 800,
+    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 800 }]
+  },
+
+  // ================= ICE CREAM SHAKES =================
+  {
+    id: 'ic-shake-001',
+    name: 'Vanilla Ice Cream Shake',
+    category: 'Ice Cream Shakes',
+    description: 'Thick and creamy vanilla bean ice cream blended with chilled milk.',
+    longDescription: 'Classic diner-style vanilla ice cream milkshake.',
+    price: 499,
+    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 499 }]
+  },
+  {
+    id: 'ic-shake-002',
+    name: 'Chocolate Ice Cream Shake',
+    category: 'Ice Cream Shakes',
+    description: 'Decadent chocolate ice cream blended with milk and chocolate drizzle.',
+    longDescription: 'Rich, velvety chocolate ice cream shake.',
+    price: 499,
+    image: 'https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 499 }]
+  },
+  {
+    id: 'ic-shake-003',
+    name: 'Strawberry Ice Cream Shake',
+    category: 'Ice Cream Shakes',
+    description: 'Creamy strawberry ice cream blended with milk and berry swirl.',
+    longDescription: 'Sweet, fruity, and creamy strawberry ice cream shake.',
+    price: 499,
+    image: 'https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 499 }]
+  },
+  {
+    id: 'ic-shake-004',
+    name: 'Oreo Ice Cream Shake',
+    category: 'Ice Cream Shakes',
+    description: 'Crunchy Oreo cookies blended with vanilla ice cream, milk, and cookie crumble.',
+    longDescription: 'Crowd-favorite cookies & cream shake loaded with real Oreo biscuits.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    badge: 'Popular',
+    sizes: [{ label: 'Regular', price: 699 }]
+  },
+
+  // ================= MARGARITA =================
+  {
+    id: 'margarita-001',
+    name: 'Mint Margarita',
+    category: 'Margarita',
+    description: 'Fresh garden mint leaves, zesty lime juice, crushed ice, and sparkling soda.',
+    longDescription: 'Ultra-refreshing icy slush blended with fresh mint, lemon, black salt, and fizz.',
+    price: 599,
+    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: true,
+    badge: 'Refresher',
+    sizes: [{ label: 'Regular', price: 599 }]
+  },
+  {
+    id: 'margarita-002',
+    name: 'Strawberry Margarita',
+    category: 'Margarita',
+    description: 'Sweet strawberry puree blended with zesty lime, crushed ice, and sparkling fizz.',
+    longDescription: 'Vibrant berry margarita slush served ice-cold.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 699 }]
+  },
+  {
+    id: 'margarita-003',
+    name: 'Peach Margarita',
+    category: 'Margarita',
+    description: 'Juicy peach nectar blended with lime, mint, and crushed ice.',
+    longDescription: 'Fruity, fizzy peach margarita slush.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 699 }]
+  },
+
+  // ================= ICED TEA =================
+  {
+    id: 'iced-tea-001',
+    name: 'Peach Iced Tea',
+    category: 'Iced Tea',
+    description: 'Chilled brewed tea infused with sweet peach flavour and served over ice.',
+    longDescription: 'Refreshing peach iced tea available in classic or gourmet blend.',
+    price: 550,
+    image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [
+      { label: 'Ice Tea (Rs. 550)', price: 550 },
+      { label: 'Large Iced Tea (Rs. 599)', price: 599 }
+    ]
+  },
+  {
+    id: 'iced-tea-002',
+    name: 'Lemon Iced Tea',
+    category: 'Iced Tea',
+    description: 'Crisp black tea chilled over ice with fresh lemon juice and mint.',
+    longDescription: 'Light, citrusy lemon iced tea to cool down your day.',
+    price: 200,
+    image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [
+      { label: 'Regular Ice Tea (Rs. 200)', price: 200 },
+      { label: 'Large Iced Tea (Rs. 499)', price: 499 }
+    ]
+  },
+  {
+    id: 'iced-tea-003',
+    name: 'Strawberry Iced Tea',
+    category: 'Iced Tea',
+    description: 'Freshly brewed iced tea infused with sweet strawberry essence.',
+    longDescription: 'Fruity, chilled strawberry iced tea.',
+    price: 599,
+    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 599 }]
+  },
+
+  // ================= HOT TEA =================
+  {
+    id: 'hot-tea-001',
+    name: 'Roasted Tea',
+    category: 'Hot Tea',
+    description: 'Deep, caramelized roasted tea leaves simmered to perfection.',
+    longDescription: 'Rich, smoky-sweet roasted tea with a bold aroma.',
+    price: 350,
+    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Cup', price: 350 }]
+  },
+  {
+    id: 'hot-tea-002',
+    name: 'Karak Chai',
+    category: 'Hot Tea',
+    description: 'Traditional strong slow-simmered milk tea brewed with aromatic green cardamom.',
+    longDescription: 'Authentic Pakistani Karak Chai brewed rich and creamy.',
+    price: 200,
     image: 'https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&w=800&q=80',
     available: true,
     featured: true,
-    badge: 'House Special',
-    sizes: [
-      { label: 'RegularKulhar / Cup', price: 220 },
-      { label: 'Large Mug', price: 300 },
-      { label: 'Sharing Matka (Serves 2)', price: 420 }
-    ]
+    badge: 'House Favorite',
+    sizes: [{ label: 'Cup', price: 200 }]
   },
   {
-    id: 'tea-002',
-    name: 'Peshawari Kahwa (Green Tea)',
-    category: 'Tea',
-    description: 'Fragrant green tea infused with green cardamom, lemongrass, and a touch of honey.',
-    longDescription: 'Light, soothing, and packed with antioxidants. Steeped fresh to order with whole cardamom pods and served with lemon wedges.',
+    id: 'hot-tea-003',
+    name: 'Green Tea',
+    category: 'Hot Tea',
+    description: 'Soothing, antioxidant-rich green tea steeped with cardamom and lemon.',
+    longDescription: 'Light and fragrant green tea.',
     price: 180,
     image: 'https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?auto=format&fit=crop&w=800&q=80',
     available: true,
     featured: false,
-    sizes: [
-      { label: 'Single Cup', price: 180 },
-      { label: 'Teapot (Serves 2)', price: 320 }
-    ]
+    sizes: [{ label: 'Cup', price: 180 }]
   },
   {
-    id: 'tea-003',
-    name: 'Classic English Black Tea',
-    category: 'Tea',
-    description: 'Brisk, amber-colored whole-leaf black tea served plain, with lemon, or a splash of milk.',
-    longDescription: 'A clean, aromatic cup of high-grown Ceylon & Assam black tea. Perfect for pairing with bakery biscuits or club sandwiches.',
-    price: 170,
+    id: 'hot-tea-004',
+    name: 'Mint Tea',
+    category: 'Hot Tea',
+    description: 'Refreshing herbal infusion steeped with fresh garden mint leaves.',
+    longDescription: 'Calming and aromatic hot mint tea.',
+    price: 180,
     image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80',
     available: true,
     featured: false,
-    sizes: [
-      { label: 'Regular Cup', price: 170 },
-      { label: 'Large Mug', price: 230 }
-    ]
-  },
-  {
-    id: 'tea-004',
-    name: 'Kashmiri Pink Chai',
-    category: 'Tea',
-    description: 'Velvety pink tea brewed with star anise and topped generously with crushed pistachios and almonds.',
-    longDescription: 'Hand-aerated for hours to achieve its signature rosy hue and rich creamy texture, garnished with roasted pistachios and slivered almonds.',
-    price: 320,
-    image: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80',
-    available: true,
-    featured: false,
-    badge: 'Winter Favorite',
-    sizes: [
-      { label: 'Regular Cup', price: 320 },
-      { label: 'Extra Nuts Cup', price: 380 }
-    ]
-  },
-  {
-    id: 'tea-005',
-    name: 'Bombay Masala Chai',
-    category: 'Tea',
-    description: 'Spiced milk tea infused with fresh ginger, cinnamon bark, cloves, and black pepper.',
-    longDescription: 'Warm and invigorating! Freshly grated ginger and roasted whole spices simmered with strong tea leaves and creamy milk.',
-    price: 250,
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=800&q=80',
-    available: true,
-    featured: false,
-    sizes: [
-      { label: 'Regular Cup', price: 250 },
-      { label: 'Large Mug', price: 320 }
-    ]
+    sizes: [{ label: 'Cup', price: 180 }]
   },
 
-  // ================= CHIPS & SNACKS =================
+  // ================= SOUPS =================
   {
-    id: 'snack-001',
-    name: 'Hand-Cut Kettle Potato Chips',
-    category: 'Chips & Snacks',
-    description: 'Extra-crunchy artisanal potato chips tossed in your choice of Sea Salt, Peri-Peri, or Masala spice.',
-    longDescription: 'Thinly sliced local potatoes batch-fried to golden perfection and seasoned while piping hot. Served with our signature garlic mayo dip.',
-    price: 240,
-    image: 'https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=800&q=80',
-    available: true,
-    featured: true,
-    badge: 'Crispy & Fresh',
-    sizes: [
-      { label: 'Regular Bowl (Sea Salt)', price: 240 },
-      { label: 'Regular Bowl (Peri-Peri)', price: 260 },
-      { label: 'Sharing Basket + 2 Dips', price: 420 }
-    ]
-  },
-  {
-    id: 'snack-002',
-    name: 'Loaded Cheese & Salsa Nachos',
-    category: 'Chips & Snacks',
-    description: 'Crispy tortilla chips smothered in warm cheddar cheese sauce, tangy salsa, and jalapeños.',
-    longDescription: 'A crowd-pleasing snack platter layered with crunchy corn tortilla chips, melted nacho cheese, house pico de gallo salsa, pickled jalapeños, and sour cream.',
-    price: 550,
-    image: 'https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&q=80',
+    id: 'soup-001',
+    name: 'Hot & Sour Soup',
+    category: 'Soups',
+    description: 'Tangy, spicy broth loaded with shredded chicken, vegetables, and egg ribbons.',
+    longDescription: 'Piping hot, hearty Hot & Sour Soup served with crispy crackers and sauces.',
+    price: 499,
+    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80',
     available: true,
     featured: false,
-    sizes: [
-      { label: 'Regular Platter', price: 550 },
-      { label: 'Add Grilled Chicken', price: 720 }
-    ]
+    sizes: [{ label: 'Bowl', price: 499 }]
   },
   {
-    id: 'snack-003',
-    name: 'Golden Masala French Fries',
-    category: 'Chips & Snacks',
-    description: 'Crispy skin-on French fries dusted with house chaat masala and served with garlic mayo.',
-    longDescription: 'Double-fried for a fluffy interior and shatteringly crisp exterior. Tossed in our tangy Lahori chaat masala blend or served classic salted.',
-    price: 340,
-    image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=800&q=80',
+    id: 'soup-002',
+    name: 'Chicken Corn Soup',
+    category: 'Soups',
+    description: 'Comforting chicken broth simmered with sweet corn, tender chicken, and egg drop.',
+    longDescription: 'Classic warming Chicken Corn Soup prepared fresh.',
+    price: 499,
+    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80',
     available: true,
     featured: false,
-    sizes: [
-      { label: 'Regular Portion', price: 340 },
-      { label: 'Large Bucket', price: 480 }
-    ]
+    sizes: [{ label: 'Bowl', price: 499 }]
   },
+
+  // ================= COLD SANDWICHES =================
   {
-    id: 'snack-004',
-    name: 'Artisan Bakery Butter Biscuits (6 Pcs)',
-    category: 'Chips & Snacks',
-    description: 'Freshly baked zeera, almond khatai, and chocolate chip butter biscuits—made for dunking in tea.',
-    longDescription: 'An assorted plate of six melt-in-the-mouth bakery biscuits including roasted cumin (zeera), pistachio nan-khatai, and Belgian chocolate chip.',
-    price: 280,
-    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=80',
-    available: true,
-    featured: false,
-    sizes: [
-      { label: 'Assorted Box (6 Pcs)', price: 280 },
-      { label: 'Family Box (12 Pcs)', price: 520 }
-    ]
-  },
-  {
-    id: 'snack-005',
-    name: 'Grilled Chicken Club Sandwich',
-    category: 'Chips & Snacks',
-    description: 'Triple-decker toasted sandwich with herb-grilled chicken, fried egg, cheddar cheese, and coleslaw.',
-    longDescription: 'Our hearty triple-layer sandwich stacked with marinated grilled chicken breast, cheddar cheese, omelette, crisp lettuce, tomatoes, and accompanied by a side of potato chips.',
-    price: 620,
+    id: 'sandwich-001',
+    name: 'Club Sandwich',
+    category: 'Cold Sandwiches',
+    description: 'Triple-decker sandwich layered with chicken, egg, cheese, crisp lettuce, and mayo.',
+    longDescription: 'Our hearty classic Club Sandwich made fresh with tender chicken and creamy dressing.',
+    price: 750,
     image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
     available: true,
     featured: true,
-    badge: 'Hearty Meal',
-    sizes: [
-      { label: 'Half Club (2 Triangles)', price: 420 },
-      { label: 'Full Club (4 Triangles + Chips)', price: 620 }
-    ]
+    badge: 'Chef Special',
+    sizes: [{ label: 'Full Serving', price: 750 }]
   },
   {
-    id: 'snack-006',
-    name: 'Fudgy Walnut Brownie',
-    category: 'Chips & Snacks',
-    description: 'Warm dark chocolate fudge brownie studded with roasted walnuts. Currently sold out for today.',
-    longDescription: 'Baked in small batches every morning using rich cocoa and crunchy walnuts. Check back tomorrow morning for a fresh batch!',
-    price: 380,
-    image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80',
-    available: false,
+    id: 'sandwich-002',
+    name: 'Egg and Cheese Sandwich',
+    category: 'Cold Sandwiches',
+    description: 'Soft bread layered with seasoned egg, cheddar cheese, and creamy spread.',
+    longDescription: 'Simple, delicious, and satisfying Egg & Cheese Sandwich.',
+    price: 450,
+    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80',
+    available: true,
     featured: false,
-    badge: 'Sold Out',
-    sizes: [
-      { label: 'Single Slice', price: 380 },
-      { label: 'Warm with Ice Cream', price: 520 }
-    ]
+    sizes: [{ label: 'Standard', price: 450 }]
+  },
+  {
+    id: 'sandwich-003',
+    name: 'Plain Chicken Sandwich',
+    category: 'Cold Sandwiches',
+    description: 'Shredded tender chicken tossed in seasoned mayo between soft sandwich bread.',
+    longDescription: 'Light and flavourful classic cold chicken sandwich.',
+    price: 420,
+    image: 'https://images.unsplash.com/photo-1554433607-66b5efe9d304?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 420 }]
+  },
+  {
+    id: 'sandwich-004',
+    name: 'Vegetable Sandwich',
+    category: 'Cold Sandwiches',
+    description: 'Fresh cucumber, tomatoes, coleslaw, and herb spread on soft bread.',
+    longDescription: 'Crisp, garden-fresh vegetable sandwich.',
+    price: 350,
+    image: 'https://images.unsplash.com/photo-1540713434306-58505cf1b6fc?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 350 }]
+  },
+  {
+    id: 'sandwich-005',
+    name: 'PSL Sixer Sandwich',
+    category: 'Cold Sandwiches',
+    description: 'Signature PSL house sandwich packed with chicken, cheese, and special house sauce.',
+    longDescription: 'Hit it out of the park with our signature PSL Sixer Sandwich!',
+    price: 499,
+    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    badge: 'PSL Special',
+    sizes: [{ label: 'Standard', price: 499 }]
+  },
+
+  // ================= FRIES =================
+  {
+    id: 'fries-001',
+    name: 'French Fries',
+    category: 'Fries',
+    description: 'Crispy golden salted potato fries served piping hot with dip.',
+    longDescription: 'Classic double-fried golden French fries.',
+    price: 499,
+    image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 499 }]
+  },
+  {
+    id: 'fries-002',
+    name: 'PSL Free Hit Loaded Fries',
+    category: 'Fries',
+    description: 'Golden fries loaded with melted cheese sauce, signature drizzle, and jalapeños.',
+    longDescription: 'Our signature PSL Free Hit Loaded Fries—crispy, cheesy, and irresistible.',
+    price: 599,
+    image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: true,
+    badge: 'PSL Signature',
+    sizes: [{ label: 'Loaded Platter', price: 599 }]
+  },
+  {
+    id: 'fries-003',
+    name: 'Masala Fries',
+    category: 'Fries',
+    description: 'Crispy fries tossed in our zesty house chaat masala spice blend.',
+    longDescription: 'Hot and tangy masala-dusted French fries.',
+    price: 530,
+    image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Regular', price: 530 }]
+  },
+
+  // ================= SAVOURIES =================
+  {
+    id: 'savoury-001',
+    name: 'Chicken Stripes + Fries',
+    category: 'Savouries',
+    description: 'Crispy golden breaded chicken strips served with hot French fries and dip.',
+    longDescription: 'Tender chicken breast strips fried to a golden crunch alongside crispy fries.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Serving', price: 699 }]
+  },
+  {
+    id: 'savoury-002',
+    name: '4 Spring Roll with Mint Sauce',
+    category: 'Savouries',
+    description: '4 crispy golden rolls stuffed with seasoned fillings, served with fresh mint sauce.',
+    longDescription: 'Shatteringly crisp spring rolls paired with our house mint chutney.',
+    price: 599,
+    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: '4 Pieces', price: 599 }]
+  },
+  {
+    id: 'savoury-003',
+    name: '4 Chicken & Jalapeño Samosa',
+    category: 'Savouries',
+    description: '4 crispy samosas filled with spiced minced chicken and tangy jalapeños.',
+    longDescription: 'Freshly fried samosas with a delicious chicken and jalapeño kick.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: '4 Pieces', price: 699 }]
+  },
+
+  // ================= BREAKFAST =================
+  {
+    id: 'breakfast-001',
+    name: 'Plain Omelette',
+    category: 'Breakfast',
+    description: 'Fluffy farm-fresh eggs seasoned with salt and black pepper, cooked to perfection.',
+    longDescription: 'Classic golden omelette served warm for an energizing start to your day.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 699 }]
+  },
+  {
+    id: 'breakfast-002',
+    name: 'Vegetables Omelette',
+    category: 'Breakfast',
+    description: 'Fluffy omelette loaded with diced tomatoes, onions, bell peppers, and fresh herbs.',
+    longDescription: 'Wholesome garden vegetable omelette made fresh to order.',
+    price: 750,
+    image: 'https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 750 }]
+  },
+  {
+    id: 'breakfast-003',
+    name: 'French Toast',
+    category: 'Breakfast',
+    description: 'Golden-brown brioche slices dipped in cinnamon-vanilla egg batter, served warm.',
+    longDescription: 'Sweet, custardy French toast dusted with powdered sugar and syrup.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 699 }]
+  },
+  {
+    id: 'breakfast-004',
+    name: 'Sunny Eggs',
+    category: 'Breakfast',
+    description: 'Sunny-side-up eggs with runny golden yolks and lightly crisped edges.',
+    longDescription: 'Farm-fresh sunny-side-up eggs seasoned and cooked to order.',
+    price: 599,
+    image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 599 }]
+  },
+  {
+    id: 'breakfast-005',
+    name: 'Mushroom Omelette',
+    category: 'Breakfast',
+    description: 'Savory omelette folded with sautéed button mushrooms, herbs, and melted cheese.',
+    longDescription: 'Rich and earthy sautéed mushroom omelette.',
+    price: 899,
+    image: 'https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Standard', price: 899 }]
+  },
+  {
+    id: 'breakfast-006',
+    name: 'Pan Cakes',
+    category: 'Breakfast',
+    description: 'Stack of fluffy golden buttermilk pancakes served with butter and warm syrup.',
+    longDescription: 'Soft, airy pancakes griddled golden brown.',
+    price: 699,
+    image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Stack', price: 699 }]
+  },
+  {
+    id: 'breakfast-007',
+    name: 'Waffles',
+    category: 'Breakfast',
+    description: 'Crispy-on-the-outside, fluffy-on-the-inside Belgian waffles with sweet toppings.',
+    longDescription: 'Freshly baked golden waffles.',
+    price: 730,
+    image: 'https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    sizes: [{ label: 'Serving', price: 730 }]
+  },
+
+  // ================= DEALS =================
+  {
+    id: 'deal-001',
+    name: 'OFFICE DEAL',
+    category: 'Deals',
+    description: '✓ 1 Coffee • ✓ 1 Sweet • ✓ 2 Mini Samosa (Chicken & Jalapeño) • ✓ French Fries',
+    longDescription: 'Complete Office Deal: Includes 1 Coffee, 1 Sweet, 2 Mini Chicken & Jalapeño Samosas, and French Fries.',
+    price: 1599,
+    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    badge: 'Office Combo',
+    sizes: [{ label: 'Complete Deal', price: 1599 }]
+  },
+  {
+    id: 'deal-002',
+    name: 'TEA BREAK DEAL',
+    category: 'Deals',
+    description: '✓ 2 Chicken & Jalapeño Samosa (Mini) • ✓ Vegetable Spring Rolls (2 pcs) • ✓ French Fries • ✓ One Hot Coffee (Cappuccino)',
+    longDescription: 'Perfect Tea Break Deal: Includes 2 Mini Chicken & Jalapeño Samosas, 2 Vegetable Spring Rolls, French Fries, and 1 Hot Cappuccino.',
+    price: 1199,
+    image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80',
+    available: true,
+    featured: false,
+    badge: 'Tea Break Combo',
+    sizes: [{ label: 'Complete Deal', price: 1199 }]
   }
 ];
-

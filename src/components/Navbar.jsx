@@ -14,18 +14,22 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-dark navbar-psl" aria-label="Main navigation">
         <div className="container">
           <Link className="navbar-brand d-flex align-items-center gap-2" to="/" onClick={closeMenu}>
-            <span
-              className="d-inline-flex align-items-center justify-content-center rounded-3"
+            <img
+              src={shopConfig.logo || '/logo.png'}
+              alt={`${shopConfig.name} Monogram`}
+              className="rounded-circle border border-warning"
               style={{
-                width: '38px',
-                height: '38px',
-                backgroundColor: '#C58B52',
-                color: '#fff'
+                width: '44px',
+                height: '44px',
+                objectFit: 'cover'
               }}
-            >
-              <i className="bi bi-cup-hot-fill fs-5"></i>
-            </span>
-            <span>{shopConfig.name}</span>
+            />
+            <div className="d-flex flex-column lh-1">
+              <span>{shopConfig.name}</span>
+              <small className="fw-normal" style={{ fontSize: '0.68rem', color: '#C58B52', letterSpacing: '1px' }}>
+                POUR • SIP • STAY
+              </small>
+            </div>
           </Link>
 
           <div className="d-flex align-items-center gap-2 order-lg-3">
